@@ -1,3 +1,27 @@
+# Github-Finder :zap:
+
+> **A search application using the Github API to fetch the github details of users and display it as a seperate UI**.
+
+### Tools
+[1]. Custom CSS file(Bootstrap style) (Responsive Layout)<br>
+[2]. React.js  <br>
+[3]. Github API (To fetch data)<br>
+[4]. Font Awesome Icons<br>
+
+### Workflow Idea
+
+> This was a learning step for me towards using *React Hooks alongside the Context API* hence the inital code of the project was written with mostly class based components that had local state within them and a bulky **App.js** with all the components embedded within it. 
+
+> After the above task was accomplished the main idea was to structure the code ,and code the application in a way that accomplishes scalability(i.e Using Context API to divide the main App.js into 3 parts), and using hooks to allow state management within the functional components. *In short* **A functional approach towards the problem** .
+
+
+
+### [Deployment](https://app.netlify.com/sites/stoic-hermann-b8e898)
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
