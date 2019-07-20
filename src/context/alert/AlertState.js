@@ -1,5 +1,4 @@
 import React, { useReducer } from 'react';
-import axios from 'axios';
 import AlertContext from './alertContext';
 import AlertReducer from './alertReducer';
 
@@ -8,29 +7,29 @@ SET_ALERT,
     REMOVE_ALERT
 } from '../types';
 
-const GithubState = props => {
+const AlertState = props => {
     const initialState = null;
     const [state,dispatch] = useReducer(AlertReducer, initialState);
 
-    //S
-
+    //Set Alert
+    const setAlert = (msg,type) => {
+        dispatch({
+            type: SET_ALERT,
+            payload: {msg,type}
+        });
+        setTimeout(() => dispatch({type: REMOVE_ALERT}),2000);
+    };
 
     return (
-        <GithubContext.Provider
+        <AlertContext.Provider
             value ={{
-                users: state.users,
-                user: state.user,
-                repos:state.repos,
-                loading: state.loading,
-                searchUsers,
-                clearUsers,
-                getUser,
-                getUserRepos
+                alert: state,
+                setAlert
             }}
         >
             {props.children}
-        </GithubContext.Provider>
+        </AlertContext.Provider>
     );
 };
 
-export default GithubState;
+export default AlertState;
