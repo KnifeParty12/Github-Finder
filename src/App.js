@@ -10,6 +10,7 @@ import GithubState from './context/github/GithubState';
 import AlertState from './context/alert/AlertState';
 
 import './App.css';
+ import NotFound from "./components/pages/NotFound";
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
                   <Route exact path='/' component={Home}/>
                       <Route exact path= '/about' component={About}/>
                       <Route exact path='/user/:login' component={User}/>
+                      <Route component={NotFound}/>
               </Switch>
 
           </div>
