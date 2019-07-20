@@ -16,7 +16,7 @@
 
 
 
-### [Deployment](https://app.netlify.com/sites/stoic-hermann-b8e898)
+### [Deployment](https://stoic-hermann-b8e898.netlify.com/)
 
 
 
